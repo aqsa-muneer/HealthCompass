@@ -103,18 +103,18 @@ Hospital VPTree::nearestNeighbor(Node* node, const Hospital& target, Hospital be
 
     return best;
 }
-// ── DELETE ────────────────────────────────────────────────────────────────────
+// DELETE:
 // VP Trees do not support in-place node removal without risking an unbalanced
 // tree, because every node's threshold was chosen relative to all points that
 // were present at build time. Removing a node can invalidate those thresholds.
 //
-// The standard correct approach is:
+// The approach:
 //   1. Traverse the whole tree and collect every stored point  (O(n))
 //   2. Erase the target from that flat list                    (O(n))
 //   3. Rebuild the tree from the remaining points              (O(n log n))
 //
 // This keeps the tree perfectly balanced and all thresholds valid.
-// Time complexity: O(n log n)  |  Space complexity: O(n)
+// Time complexity: O(n log n)
 
 void VPTree::collectAll(Node* node, vector<Hospital>& out) const {
     if (!node) return;
