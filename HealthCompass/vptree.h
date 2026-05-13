@@ -58,11 +58,6 @@ public:
 
     Hospital nearest(const Hospital& target) const;
     void rangeSearch(Node* node, const Hospital& target, double radiusKm, vector<Hospital>& result) const;
-    //delete:
-    // Delete a hospital by name from the VP Tree.
-    // Strategy: collect all points via in-order traversal, remove the target,
-    // then rebuild the tree from the remaining points.
-    // Returns true if the hospital was found and deleted, false otherwise.
     bool deleteNode(const string& hospitalName);
 
 };
