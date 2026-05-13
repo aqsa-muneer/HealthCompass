@@ -4,7 +4,7 @@ HealthCompass aims to develop an efficient system, built using C++ with SFML lib
 
 ### File Structure
 
-# HealthCompass/
+##### HealthCompass/
 
 |--- main.cpp (SMFL UI, event handling)
 
