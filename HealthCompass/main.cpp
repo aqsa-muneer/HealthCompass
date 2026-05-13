@@ -409,7 +409,7 @@ int main() {
             window.draw(makeText(font, "New Search", 18, 75, 630, sf::Color::White));
         }
 
-        // CHANGE 2: Show status messages
+        // Show status messages
         if (!status.empty()) {
             sf::Color statusColor = sf::Color(180, 60, 60);
             if (status.find("similar") != string::npos)
