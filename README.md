@@ -19,3 +19,15 @@ HealthCompass/
 |--- CMakeLists.txt
 
 |--- Arial.ttf
+
+Terminal Command: 
+
+clang++ -std=c++17 main.cpp features.cpp vptree.cpp -o launch_app \
+
+-I/opt/homebrew/include \
+
+-L/opt/homebrew/lib \
+
+-Wl,-rpath,/opt/homebrew/lib \
+
+-lsfml-graphics -lsfml-window -lsfml-system
